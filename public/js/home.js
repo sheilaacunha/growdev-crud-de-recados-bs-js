@@ -63,17 +63,13 @@ formEditarHtml.addEventListener('submit', (ev) => {
     usuarioLogado.recados[indiceEditado].descricao = descricaoEditada.value
     usuarioLogado.recados[indiceEditado].detalhamento = detalhamentoEditado.value
 
-
     const cardTitle = document.querySelector(`#recados-${idEditar} .card-title`)
     cardTitle.innerHTML = descricaoEditada.value
-
 
     const cardText = document.querySelector(`#recados-${idEditar} .card-text`)
     cardText.innerHTML = detalhamentoEditado.value
 
     atualizarUsuarioLogadoStorage(usuarioLogado)
-
-
 
     console.log(descricaoEditada.value);
     console.log(detalhamentoEditado.value);
@@ -139,11 +135,11 @@ function recadosNoHtml(recado) {
     cardBody.classList.add('card-body')
 
     const cardTitle = document.createElement('h5')
-    cardTitle.classList.add('card-title', 'd-flex', 'justify-content-center')
+    cardTitle.classList.add('card-title', 'd-flex', 'justify-content-center',"text-break" )
     cardTitle.innerHTML = descricao
 
     const cardText = document.createElement('p')
-    cardText.classList.add('card-text', 'text-center')
+    cardText.classList.add('card-text', 'text-center',"text-break")
     cardText.innerHTML = detalhamento
 
     const divBtn = document.createElement('div')
@@ -185,7 +181,6 @@ function recadosNoHtml(recado) {
 
     cardRecadosHtml.appendChild(col)
 }
-
 function apagar(id) {
     const indiceEncontrado = usuarioLogado.recados.findIndex((recado) => recado.id === id)
     usuarioLogado.recados.splice(indiceEncontrado, 1)

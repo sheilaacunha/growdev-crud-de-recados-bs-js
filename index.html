@@ -2,98 +2,106 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sheila Acunha">
+    <meta name="description" content="projeto proprio">
+    <meta name="keywords" content="HTMLS, CSS, JS, bootstrap">
     <!-- fonte google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&display=swap" rel="stylesheet" />
     <!-- link do bs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./public/assets/card-checklist.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/card-checklist.svg" type="image/x-icon" />
     <!-- meu css -->
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css" />
     <title>Sistema de Recados II</title>
 </head>
 
 <body class="bodyIndex">
-    <main class="mainIndex">
-        <div class="login-container" id="login-container">
-            <div class="form-container">
-                <form class="form form-login" id="formLogin">
-                    <h2 class="form-title">Sistema de Recados</h2>
-                    <h2 class="form-sub-title">Login </h2>
-                    <div class="form-input-container">
-                        <input type="email" class="form-input" placeholder="Email" required id="emailLogin">
-                        <input type="password" class="form-input" placeholder="Senha" required id="passwordLogin">
-                    </div>
-
-                    <button type="submit" class="form-button form-buttonII">Logar</button>
-                    <p class="mobile-text">
-                        Não tem conta?
-                        <a href="#" id="open-register-mobile">Registre-se</a>
-                    </p>
-                    <!-- menssagem de alerta para o usuario -->
-                    <div class="toast align-items-center text-bg-danger" role="alert" aria-live="assertive"
-                        aria-atomic="true">
-                        <div class="d-flex">
-                            <div class="toast-body">
-                                message.
-                            </div>
-                            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
-                                aria-label="Close"></button>
+    <div class="mainIndex">
+        <main>
+            <div class="login-container" id="login-container">
+                <div class="form-container">
+                    <form class="form form-login" id="formLogin">
+                        <h2 class="form-title">Sistema de Recados</h2>
+                        <h2 class="form-sub-title">Login</h2>
+                        <div class="form-input-container">
+                            <input type="email" class="form-input" placeholder="Email" required id="emailLogin" />
+                            <input type="password" class="form-input" placeholder="Senha" required id="passwordLogin" />
                         </div>
-                    </div>
 
-                </form>
-                <form class="form form-register" id="formCadastro">
-                    <h2 class="form-title">Sistema de Recados</h2>
-                    <h2 class="form-sub-title">Cadastro</h2>
-                    <div class="form-input-container">
-
-                        <input type="text" class="form-input" placeholder="Nome" id="nomeCadastro" required
-                            minlength="3">
-                        <input type="email" class="form-input" placeholder="Email" required id="emailCadastro">
-
-                        <input type="password" class="form-input" minlength="6" required placeholder="Senha"
-                            id="passwordCadastro">
-                    </div>
-                    <button type="submit" class="form-button form-buttonI">Cadastrar</button>
-                    <p class="mobile-text">
-                        Já tem conta?
-                        <a href="#" id="open-login-mobile">Login</a>
-                    </p>
-                    <!-- menssagem de alerta para o usuario -->
-                    <div class="toast align-items-center text-bg-danger" role=" alert" aria-live="assertive"
-                        aria-atomic="true">
-                        <div class="d-flex">
-                            <div class="toast-body">
-                                message.
+                        <button type="submit" class="form-button form-buttonII">
+                            Logar
+                        </button>
+                        <p class="mobile-text">
+                            Não tem conta?
+                            <a href="#" id="open-register-mobile">Registre-se</a>
+                        </p>
+                        <!-- menssagem de alerta para o usuario -->
+                        <div class="toast align-items-center text-bg-danger" role="alert" aria-live="assertive"
+                            aria-atomic="true">
+                            <div class="d-flex">
+                                <div class="toast-body">message.</div>
+                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
                             </div>
-                            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
-                                aria-label="Close"></button>
                         </div>
+                    </form>
+                    <form class="form form-register" id="formCadastro">
+                        <h2 class="form-title">Sistema de Recados</h2>
+                        <h2 class="form-sub-title">Cadastro</h2>
+                        <div class="form-input-container">
+                            <input type="text" class="form-input" placeholder="Nome" id="nomeCadastro" required
+                                minlength="3" />
+                            <input type="email" class="form-input" placeholder="Email" required id="emailCadastro" />
+
+                            <input type="password" class="form-input" minlength="6" required placeholder="Senha"
+                                id="passwordCadastro" />
+                        </div>
+                        <button type="submit" class="form-button form-buttonI">
+                            Cadastrar
+                        </button>
+                        <p class="mobile-text">
+                            Já tem conta?
+                            <a href="#" id="open-login-mobile">Login</a>
+                        </p>
+                        <!-- menssagem de alerta para o usuario -->
+                        <div class="toast align-items-center text-bg-danger" role=" alert" aria-live="assertive"
+                            aria-atomic="true">
+                            <div class="d-flex">
+                                <div class="toast-body">message.</div>
+                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <button class="form-button btnPasse" id="open-login">
+                            Entrar
+                        </button>
                     </div>
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-
-                    <button class="form-button btnPasse " id="open-login">Entrar</button>
-                </div>
-                <div class="overlay">
-
-                    <button class="form-button btnPasse " id="open-register">Cadastrar</button>
+                    <div class="overlay">
+                        <button class="form-button btnPasse" id="open-register">
+                            Cadastrar
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        teste
-    </footer>
+        </main>
+        <footer>
+            <a href="https://www.linkedin.com/in/sheilaacunha90/" title="Link Linkedin" target="_blank">&middot; &copy;
+                2023 Sheila &middot;
+            </a>
+        </footer>
+    </div>
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastNotificacaoIndex"></div>
 
     <!-- link js do bs -->
