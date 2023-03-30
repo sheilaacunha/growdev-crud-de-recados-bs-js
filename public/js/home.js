@@ -187,7 +187,7 @@ function apagar(id) {
 
     atualizarUsuarioLogadoStorage(usuarioLogado)
 
-    let divCardExcluir = document.getElementById(id)
+    let divCardExcluir = document.getElementById(`recados-${id}`)
     divCardExcluir.remove()
 
     modalApagar.hide()
