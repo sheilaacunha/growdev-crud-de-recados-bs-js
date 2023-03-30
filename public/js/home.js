@@ -53,25 +53,23 @@ formRecadosHtml.addEventListener('submit', (event) => {
 formEditarHtml.addEventListener('submit', (ev) => {
     ev.preventDefault()
 
-    // if (!formEditarHtml.checkValidity()) {
-    //     formEditarHtml.classList.add('was-validated')
-    //     return
-    // }
+    if (!formEditarHtml.checkValidity()) {
+        formEditarHtml.classList.add('was-validated')
+        return
+    }
 
     const indiceEditado = usuarioLogado.recados.findIndex((recado) => recado.id === idEditar)
-
-    // console.log(indiceEditado)
-    // console.log(usuarioLogado.recados[indiceEditado].descricao);
 
     usuarioLogado.recados[indiceEditado].descricao = descricaoEditada.value
     usuarioLogado.recados[indiceEditado].detalhamento = detalhamentoEditado.value
 
 
-    const cardTitle = document.querySelector(`#recado-${idEditar} .card-title`)
+    const cardTitle = document.querySelector(`#recados-${idEditar} .card-title`)
     cardTitle.innerHTML = descricaoEditada.value
 
-        // const cardText = document.querySelector(`#recado-${idEditar} .card-text`)
-        // cardText.innerHTML = detalhamentoEditado.value
+
+    const cardText = document.querySelector(`#recados-${idEditar} .card-text`)
+    cardText.innerHTML = detalhamentoEditado.value
 
     atualizarUsuarioLogadoStorage(usuarioLogado)
 
@@ -79,7 +77,7 @@ formEditarHtml.addEventListener('submit', (ev) => {
 
     console.log(descricaoEditada.value);
     console.log(detalhamentoEditado.value);
-    
+
     modalEditar.hide()
     toastAlert('success', 'Recado editado com sucesso!')
     idEditar = -1
@@ -121,7 +119,7 @@ function recadosNoHtml(recado) {
 
     const col = document.createElement('div')
     col.classList.add('col-12', 'col-sm-6', 'col-lg-6', 'col-xl-3')
-    col.setAttribute('id', `${id}`)
+    col.setAttribute('id', `recados-${id}`)
 
     const card = document.createElement('div')
     card.classList.add('card', 'bg-secondary-subtle')

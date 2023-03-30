@@ -20,15 +20,14 @@ a {
     background-image: url(../assets/3.png);
     background-position: center;
     background-size: cover;
-    font-family: 'Epilogue', sans-serif;            
+    font-family: 'Epilogue', sans-serif;     
+    backdrop-filter: blur(10px);       
 }
 .mainIndex {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #d99ad507;
-    backdrop-filter: blur(10px);
 }
 .login-container {
     position: relative;
