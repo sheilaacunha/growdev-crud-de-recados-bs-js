@@ -246,6 +246,7 @@ nav,
     border: 3px solid var(--primary-color);
 }
 
+/* ================================================================== */
 @media (max-width:768px) {
     .form-button {
         background-color: var(--primary-color);
@@ -306,8 +307,6 @@ nav,
         font-weight: 900;
         color: inherit;
         text-decoration: underline;
-
-
     }
 
     .overlay-container {
@@ -318,7 +317,7 @@ nav,
         border-radius: 0;
     }
 
-    .fbs{
+    .fbs {
         display: none;
     }
 }
