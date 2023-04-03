@@ -4,8 +4,6 @@ const modalRecados = new bootstrap.Modal("#modalRecados");
 const modalApagar = new bootstrap.Modal('#modalApagar')
 const modalEditar = new bootstrap.Modal('#modalEditar')
 
-const nomeUsuarioLogadoHtml = document.getElementById('nomeUsuarioLogado')
-
 const formRecadosHtml = document.getElementById('formRecados')
 const formEditarHtml = document.getElementById('formEditar')
 
@@ -28,14 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!usuarioLogado) {
 
-        toastAlert('danger', 'Voce precisa estar logado para acessar essa página!!!');
+        toastAlert('danger', 'Voce precisa estar logado para acessar essa página.😒');
         setTimeout(() => {
             window.location.href = 'index.html';
         }, 3000)
 
     }
     // nome do usuario na página
-    nomeUsuarioLogadoHtml.innerHTML = usuarioLogado.nome
+    dadosHtml()
+
 
     usuarioLogado.recados.forEach((recado) => recadosNoHtml(recado))
 })
@@ -75,7 +74,7 @@ formEditarHtml.addEventListener('submit', (ev) => {
     console.log(detalhamentoEditado.value);
 
     modalEditar.hide()
-    toastAlert('success', 'Recado editado com sucesso!')
+    toastAlert('success', 'Recado editado com sucesso.👌')
     idEditar = -1
     formEditarHtml.classList.remove('was-validated')
 
@@ -108,7 +107,8 @@ function criarRecados() {
     recadosNoHtml(novoRecado)
     modalRecados.hide()
     formRecadosHtml.classList.remove('was-validated')
-    toastAlert('success', 'Recado cadastrado com sucesso!')
+    toastAlert('success', 'Recado cadastrado com sucesso.👌')
+    dadosHtml()
 }
 function recadosNoHtml(recado) {
     const { id, data, descricao, detalhamento } = recado
@@ -118,7 +118,7 @@ function recadosNoHtml(recado) {
     col.setAttribute('id', `recados-${id}`)
 
     const card = document.createElement('div')
-    card.classList.add('card', 'bg-secondary-subtle')
+    card.classList.add('card', 'bg-body-secondary')
 
     const cardHeader = document.createElement('div')
     cardHeader.classList.add('card-header', 'd-flex', 'justify-content-around')
@@ -135,11 +135,11 @@ function recadosNoHtml(recado) {
     cardBody.classList.add('card-body')
 
     const cardTitle = document.createElement('h5')
-    cardTitle.classList.add('card-title', 'd-flex', 'justify-content-center',"text-break" )
+    cardTitle.classList.add('card-title', 'd-flex', 'justify-content-center', "text-break")
     cardTitle.innerHTML = descricao
 
     const cardText = document.createElement('p')
-    cardText.classList.add('card-text', 'text-center',"text-break")
+    cardText.classList.add('card-text', 'text-center', "text-break")
     cardText.innerHTML = detalhamento
 
     const divBtn = document.createElement('div')
@@ -191,7 +191,8 @@ function apagar(id) {
     divCardExcluir.remove()
 
     modalApagar.hide()
-    toastAlert('success', 'Contato deletado com sucesso!')
+    toastAlert('success', 'Contato deletado com sucesso.👌')
+    dadosHtml()
 }
 function sair() {
     atualizarUsuariosNoStorage()
@@ -201,6 +202,13 @@ function sair() {
 function dataAtual() {
     let data = new Date().toLocaleDateString('pt-BR', { dateStyle: 'short' });
     return data
+}
+function dadosHtml() {
+    const nomeUsuarioLogadoHtml = document.getElementById('nomeUsuarioLogado')
+    const nRecados = document.getElementById('nRecados')
+    nomeUsuarioLogadoHtml.innerHTML = usuarioLogado.nome
+    nRecados.innerHTML = usuarioLogado.recados.length
+
 }
 function buscarUsuarioLogado() {
     // localstorage logado

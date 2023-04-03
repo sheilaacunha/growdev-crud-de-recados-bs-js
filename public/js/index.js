@@ -43,7 +43,7 @@ function criarUsuario(){
     let verificarUsuario = listaUsuariosCadastrados .some((valor)=> valor.email === emailCadastroHtml.value)
 
     if(verificarUsuario){
-        toastAlertIndex('danger', 'Tente outro E-mail, pois esse já está cadastrado !!!!')
+        toastAlertIndex('danger', 'Tente outro E-mail, pois esse já está cadastrado. 😐')
         return
         
     }
@@ -58,7 +58,7 @@ function criarUsuario(){
     listaUsuariosCadastrados.push(novoUsuario)
     salvarUsuarioStorage(listaUsuariosCadastrados)
     formCadastroHtml.reset()
-    toastAlertIndex('success','Cadastro realizado com sucesso.')
+    toastAlertIndex('success','Cadastro realizado com sucesso.👌')
     console.log(listaUsuariosCadastrados);
 
 }
@@ -67,7 +67,7 @@ function  fazerLogin(){
     let usuarioEncontrado = usuarios.find((usuario)=> usuario.email === emailLoginHtml.value && usuario.senha === passwordLoginHtml.value)
 
     if(usuarioEncontrado){
-        toastAlertIndex('success','Login feito com successo')
+        toastAlertIndex('success','Login feito com successo.👌')
         setTimeout(() => {
             localStorage.setItem('usuarioLogadoRecado', JSON.stringify(usuarioEncontrado))
      
@@ -77,7 +77,7 @@ function  fazerLogin(){
        
         // console.log(usuarioEncontrado.nome);
     }else{
-        toastAlertIndex('danger','Dados incorretos tente novamente.')
+        toastAlertIndex('danger','Dados incorretos tente novamente.😑')
     }
 }
 
