@@ -67,7 +67,7 @@ function  fazerLogin(){
     let usuarioEncontrado = usuarios.find((usuario)=> usuario.email === emailLoginHtml.value && usuario.senha === passwordLoginHtml.value)
 
     if(usuarioEncontrado){
-        toastAlertIndex('success','Login feito com successo.👌')
+        toastAlertIndex('success','Login feito com sucesso.👌')
         setTimeout(() => {
             localStorage.setItem('usuarioLogadoRecado', JSON.stringify(usuarioEncontrado))
      
