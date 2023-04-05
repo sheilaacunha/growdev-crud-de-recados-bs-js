@@ -1,4 +1,4 @@
-<h1 align="center"><b>Lista de Contatos! </b>Uma aplicação para organizar sua agenda de contatos!</h1>
+<h1 align="center"><b>Lista de Recados ! </b>Uma aplicação para organizar sua agenda de contatos!</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
