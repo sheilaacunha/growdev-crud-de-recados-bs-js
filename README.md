@@ -39,7 +39,7 @@ Visite o deploy [Aqui](https://sheilaacunha.github.io/growdev-crud-de-recados-bs
 
 ## 📝 Desenvolvido
 
-Trabalho de módulo final Front-End II. Desenvolvido por Sheila com ajuda do Mentor Letícia e o tech Helper Guilherme.
+Desenvolvido por Sheila com ajuda do Mentor Letícia e o tech Helper Guilherme.
  
   
  
